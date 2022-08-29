@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=UTF-8>
+        <title>Search</title>
+        <link rel=stylesheet href=css/style.css>
+        <script src=https://code.jquery.com/jquery-3.6.0.js></script>
+        <link rel="shortcut icon" type=image/x-icon href=web_img/hc_icon.ico>
+        <link rel="apple-touch-icon" href=web_img/hc_icon.png>
+        <meta name=msapplication-square70x70logo href=web_img/hc_icon.png>
+        <meta name=msapplication-square150x150logo href=web_img/hc_icon.png>
+        <meta name=msapplication-square310x310logo href=web_img/hc_icon.png>
+        <meta name=msapplication-wide310x150logo href=web_img/hc_icon.png>
+        <meta name=msapplication-TileColor content=#101010;>
+        <script src=searchFunctions.js></script>
+        <script src=menuFunction.js></script>
+        <script>
+            $(document).ready(() =>
+            {
+                $('#search_input').keyup((e) =>
+                {
+                    if (e.which == 13)
+                        search();
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <div class=content>
+            <div class=sidemenu_sc id=sidemenu>
+                <span id=menu_tog onclick='$("#sidemenu").toggleClass("expanded");replaceMenu_SC($(this).attr("id"));'><a class=gb style=font-size:4em;><b>≡</b></a></span>
+            </div>
+            <div id=back3>
+                <img id=hc_logo src=web_img/hc_logo.png alt='horizonzz classics' height=75px>
+                <div id=search_box_page>
+                    <input id=search_input placeholder='Search...' type=text>
+                    <div class=search_button onclick=search()>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.35em" height="1.35em" fill="currentColor" class='gb_page' viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class=search_results>
+                    <div class=sc_item id=Extraterrestrials>
+                        <img class=sc_img src=web_img/hc_icon.png>
+                        <ul id=sc_ul>
+                            <li id=sc_title><a id=searchlink href=extraterrestrials.html><h1>Extraterrestrials - v1.0</h1></a></li>
+                            <li id=ul_li>Updated: 21 August 2022</li>
+                            <li id=ul_li>Tags: Arcade, Shooter, Space</li>
+                        </ul>
+                    </div>
+                    <div class=sc_item id=Meteoroids>
+                        <img class=sc_img src=web_img/hc_icon.png>
+                        <ul id=sc_ul>
+                            <li id=sc_title><a id=searchlink href=meteoroids.html><h1>Meteoroids - v1.3</h1></a></li>
+                            <li id=ul_li>Updated: 21 August 2022</li>
+                            <li id=ul_li>Tags: Arcade, Shooter, Space</li>
+                        </ul>
+                    </div>
+                    <div class=sc_item id=Pizza>
+                        <img class=sc_img src=web_img/hc_icon.png>
+                        <ul id=sc_ul>
+                            <li id=sc_title><a id=searchlink href=pizza.html><h1>Pizza Man - v1.0</h1></a></li>
+                            <li id=ul_li>Updated: Day Month 2022</li>
+                            <li id=ul_li>Tags: Arcade, Food, Maze</li>
+                        </ul>
+                    </div>
+                    <div class=sc_item id=Template>
+                        <img class=sc_img src=web_img/hc_icon.png>
+                        <ul id=sc_ul>
+                            <li id=sc_title><a id=searchlink href=meteoroids.html><h1>Template - v1.0</h1></a></li>
+                            <li id=ul_li>Updated: Day Month Year</li>
+                            <li id=ul_li>Tags: Tag#1, Tag#2, Tag#3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('#search_input').attr('value',localStorage.getItem('search_value'));
+            search();
+            localStorage.setItem('search_value','');
+        </script>
+        <div id=footer_cont>
+            <footer id=footer>
+                <ul id=footerUL name=branding style=padding-left:1px>
+                    <li id=footerLIT><img src=web_img/horizonzzlogo.png alt=horizonzz height=55px></li>
+                    <li id=footerLIT><a> Copyright © 2022 HorizonZz </a></li>
+                    <li id=footerLIT><a> - All Rights Reserved. </a></li>
+                </ul>
+                <ul id=footerUL name=links style=margin-left:13px>
+                    <li id=footerLIT style=margin-top:13px><a> <b>Links</b> </a></li>
+                    <li id=footerLI><a href=https://horizonzz.com target=_blank rel="noopener noreferrer">Developer</a></li>
+                    <li id=footerLI><a href=https://github.com/Git-HorizonZz target=_blank rel="noopener noreferrer">Github</a></li>
+                </ul>
+                <ul id=footerUL name=links style=margin-left:13px>
+                    <li id=footerLIT style=margin-top:13px;><a> <b>Help</b> </a></li>
+                    <li id=footerLI><a href=about.html>About</a></li>
+                    <li id=footerLI><a id="link" href="mailto:horizonzzQuery@gmail.com">Contact</a></li>
+                    <li id=footerLI><a href=about.html#policy_title>Privacy Policy</a></li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+</html>

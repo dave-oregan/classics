@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=UTF-8>
+        <title>About</title>
+        <link rel="shortcut icon" type=image/x-icon href=web_img/hc_icon.ico>
+        <link rel="apple-touch-icon" href=web_img/hc_icon.png>
+        <meta name=msapplication-square70x70logo href=web_img/hc_icon.png>
+        <meta name=msapplication-square150x150logo href=web_img/hc_icon.png>
+        <meta name=msapplication-square310x310logo href=web_img/hc_icon.png>
+        <meta name=msapplication-wide310x150logo href=web_img/hc_icon.png>
+        <meta name=msapplication-TileColor content=#101010;>
+        <link rel=stylesheet href=css/style.css>
+        <script src=https://code.jquery.com/jquery-3.6.0.js></script>
+        <script src=menuFunction.js></script>
+    </head>
+    <body>
+        <div class=content>
+            <div class=sidemenu id=sidemenu>
+                <span id=menu_tog onclick='$("#sidemenu").toggleClass("expanded");replaceMenu($(this).attr("id"));'><a class=gb style=font-size:4em;><b>≡</b></a></span>
+            </div>
+            <div id=back2>
+                <div id=abt_cont>
+                    <img id=hc_logo src=web_img/hc_logo.png alt='horizonzz classics' height=75px>
+                    <h1 class=secTitle id=about_title style=margin-bottom:-0.1em;><a style=font-size:larger;>ABOUT</a></h1>
+                    <div id=desc_lists>
+                        <p id=abtTxt>&emsp;&emsp;Growing up, my parents talked of the games they played, and how different they were to the modern ones. I always thought of how complicated it was to locate them all to play them, so I created HorizonZz's Classics. This site is a collection of my own versions of all the classic arcade games of decades past. </p>
+                        <p style=margin-top:2.5em;><svg xmlns="http://www.w3.org/2000/svg" width="12em" height="12em" fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
+                            <path d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z"/>
+                            <path d="M0 9.665v1.717a1 1 0 0 0 .553.894l6.553 3.277a2 2 0 0 0 1.788 0l6.553-3.277a1 1 0 0 0 .553-.894V9.665c0-.1-.06-.19-.152-.23L9.5 6.715v.993l5.227 2.178a.125.125 0 0 1 .001.23l-5.94 2.546a2 2 0 0 1-1.576 0l-5.94-2.546a.125.125 0 0 1 .001-.23L6.5 7.708l-.013-.988L.152 9.435a.25.25 0 0 0-.152.23z"/>
+                        </svg></p>
+                    </div>
+                    <h1 class=secTitle id=policy_title><a style=font-size:larger;>PRIVACY POLICY</a></h1>
+                    <p id=polTxt>1. We will never ask for any of your data.</p>
+                    <p id=polTxt>2. We do not save any personal information about our users.</p>
+                    <p id=polTxt>3. Your highscores are saved locally on your own browser.</p>
+                    <p id=polTxt>4. Everything on this website is completely free.</p>
+                </div>
+            </div>
+        </div>
+        <div id=footer_cont>
+            <footer id=footer>
+                <ul id=footerUL name=branding style=padding-left:1px>
+                    <li id=footerLIT><img src=web_img/horizonzzlogo.png alt=horizonzz height=55px></li>
+                    <li id=footerLIT><a> Copyright © 2022 HorizonZz </a></li>
+                    <li id=footerLIT><a> - All Rights Reserved. </a></li>
+                </ul>
+                <ul id=footerUL name=links style=margin-left:13px>
+                    <li id=footerLIT style=margin-top:13px><a> <b>Links</b> </a></li>
+                    <li id=footerLI><a href=https://horizonzz.com target=_blank rel="noopener noreferrer">Developer</a></li>
+                    <li id=footerLI><a href=https://github.com/Git-HorizonZz target=_blank rel="noopener noreferrer">Github</a></li>
+                </ul>
+                <ul id=footerUL name=links style=margin-left:13px>
+                    <li id=footerLIT style=margin-top:13px;><a><b>Help</b></a></li>
+                    <li id=footerLI><a href=about.html>About</a></li>
+                    <li id=footerLI><a id="link" href="mailto:horizonzzQuery@gmail.com">Contact</a></li>
+                    <li id=footerLI><a href=about.html#policy_title>Privacy Policy</a></li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+</html>
