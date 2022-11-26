@@ -17,7 +17,7 @@ body {
 	--pixel: .125rem;
 }
 
-#footer, #back, #back2, #back3, #sidemenu, #menu_toggle {
+#footer, #back, #back2, #back3, #back4, #sidemenu, #menu_toggle {
 	box-shadow:
         0 calc(var(--pixel) * -3) 0 calc(var(--pixel) * -1) var(--pixel-bg),
         0 calc(var(--pixel) * 3) 0 calc(var(--pixel) * -1) var(--pixel-bg),
@@ -99,6 +99,24 @@ body {
     width: 70%;
     color: #EEF0F2;
 	background: var(--pixel-bg);
+}
+
+#back4 {
+    z-index: 0;
+    margin-left: 2.5em;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    margin-right: 2.5em;
+    height: min-content;
+    width: 30%;
+    color: #EEF0F2;
+	background: var(--pixel-bg);
+}
+
+#back4:hover {
+    color: var(--pixel-border);
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 #search_input {
@@ -457,8 +475,15 @@ body {
     margin:auto;
 }
 
+#hc_logo_m {
+    width: 45%;
+    height: auto;
+    display:block;
+    margin:auto;
+}
+
 #abtTxt {
-    width: 40%;
+    width: 45%;
     font-size: larger;
     line-height: 2em;
     margin-right: 2.5%;
